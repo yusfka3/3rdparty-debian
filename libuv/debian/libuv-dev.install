@@ -1,0 +1,5 @@
+#!/usr/bin/dh-exec
+usr/include/*
+usr/lib/*/lib*.a
+usr/lib/*/lib*.la
+usr/lib/*/pkgconfig/*

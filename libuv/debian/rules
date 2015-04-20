@@ -1,0 +1,33 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+include /usr/share/dpkg/default.mk
+
+# Uncomment this to turn on verbose mode.
+#export DH_VERBOSE=1
+
+export SOPKG=libuv
+
+%:
+	dh $@
+
+override_dh_auto_install:
+	$(MAKE) DESTDIR=$(CURDIR)/debian/tmp install
+
+override_dh_strip:
+	dh_strip --dbg-package=$(SOPKG)-dbg
+	sed -i s/@DEB_HOST_MULTIARCH@/$(DEB_HOST_MULTIARCH)/ debian/${SOPKG}-dev/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/libuv.pc
+	sed -i s/@DEB_VERSION_UPSTREAM@/$(DEB_VERSION_UPSTREAM)/ debian/${SOPKG}-dev/usr/lib/$(DEB_HOST_MULTIARCH)/pkgconfig/libuv.pc
+
+override_dh_clean:
+	dh_clean
+	find . -name .buildstamp -delete
+
+override_dh_auto_test:
+ifeq (,$(filter nocheck,$(DEB_BUILD_OPTIONS)))
+ifeq ($(DEB_BUILD_ARCH_OS),linux)
+	$(MAKE) -j1 check 
+else
+	-$(MAKE) -j1 check
+endif
+endif

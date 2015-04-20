@@ -1,0 +1,178 @@
+libuv (1.4.2-1) unstable; urgency=low
+
+  * Locally built package from git repository at tag v1.4.2 
+
+ -- Amit Bose <bose@noironetworks.com>  Thu, 16 Apr 2015 12:35:08 -0700
+
+libuv (0.10.28-6) unstable; urgency=high
+
+  * Backported: call setgroups before calling setuid/setgid
+    (Closes: #779173 - CVE-2015-0278)
+
+ -- Luca Bruno <lucab@debian.org>  Wed, 25 Feb 2015 10:50:58 +0100
+
+libuv (0.10.28-5) unstable; urgency=medium
+
+  * Too early for versioned provides, reverted
+    (Closes: #762291, #762300)
+
+ -- Luca Bruno <lucab@debian.org>  Sun, 21 Sep 2014 14:49:26 +0200
+
+libuv (0.10.28-4) unstable; urgency=medium
+
+  * control: provide versioned virtual package
+  * Fix arm64 failures due to missing epoll_wait()
+
+ -- Luca Bruno <lucab@debian.org>  Sat, 20 Sep 2014 11:49:39 +0200
+
+libuv (0.10.28-3) unstable; urgency=medium
+
+  * Rename -dev package, prepare for multiple versions
+  * Add a libuv0.10-dev binary package
+
+ -- Luca Bruno <lucab@debian.org>  Tue, 26 Aug 2014 20:34:31 +0200
+
+libuv (0.10.28-2) unstable; urgency=medium
+
+  * Testsuite is fragile on kfreebsd, ignore transient failures there
+    (Closes: #754756)
+
+ -- Luca Bruno <lucab@debian.org>  Tue, 19 Aug 2014 22:57:23 +0200
+
+libuv (0.10.28-1) unstable; urgency=medium
+
+  * New upstream release
+   + Drop patches applied upstream
+
+ -- Luca Bruno <lucab@debian.org>  Sat, 16 Aug 2014 21:21:55 +0200
+
+libuv (0.10.27-2) unstable; urgency=medium
+
+  * Fix "spawn_closed_process_io" test failure
+    (Closes: #750301)
+
+ -- Luca Bruno <lucab@debian.org>  Tue, 10 Jun 2014 19:59:51 +0200
+
+libuv (0.10.27-1) unstable; urgency=medium
+
+  * Bump Standards-Version
+  * New upstream release
+    + Refreshed quilt patches
+
+ -- Luca Bruno <lucab@debian.org>  Sat, 10 May 2014 18:56:41 +0200
+
+libuv (0.10.25-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Luca Bruno <lucab@debian.org>  Sun, 02 Mar 2014 16:38:59 +0100
+
+libuv (0.10.24-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Luca Bruno <lucab@debian.org>  Sun, 02 Mar 2014 13:36:07 +0100
+
+libuv (0.10.23-1) unstable; urgency=medium
+
+  * New upstream release
+    + Drop stat parsing patch, merged upstream
+
+ -- Luca Bruno <lucab@debian.org>  Sat, 01 Mar 2014 18:07:52 +0100
+
+libuv (0.10.22-2) unstable; urgency=medium
+
+  * Relax /proc/stat parsing assumptions, prevent FTBFS on sparc
+
+ -- Luca Bruno <lucab@debian.org>  Mon, 20 Jan 2014 10:40:59 +0100
+
+libuv (0.10.22-1) unstable; urgency=medium
+
+  * New upstream version 
+
+ -- Luca Bruno <lucab@debian.org>  Sun, 19 Jan 2014 15:20:49 +0100
+
+libuv (0.10.21-1) unstable; urgency=medium
+
+  * New upstream version
+    + Drop SO_REUSEPORT patch, merged upstream
+
+ -- Luca Bruno <lucab@debian.org>  Mon, 23 Dec 2013 22:58:01 +0100
+
+libuv (0.10.19-2) unstable; urgency=low
+
+  * Upstream backport: fix up SO_REUSEPORT commit
+
+ -- Luca Bruno <lucab@debian.org>  Mon, 25 Nov 2013 21:59:02 +0100
+
+libuv (0.10.19-1) unstable; urgency=low
+
+  * New upstream stable version
+    + Drop SO_REUSEPORT patch, merged upstream
+
+ -- Luca Bruno <lucab@debian.org>  Sun, 24 Nov 2013 17:06:49 +0100
+
+libuv (0.10.18-1) unstable; urgency=low
+
+  * New upstream stable version
+
+ -- Luca Bruno <lucab@debian.org>  Thu, 24 Oct 2013 19:40:55 +0200
+
+libuv (0.10.17-1) unstable; urgency=low
+
+  * Initial upload to unstable
+  * Add proper fields for multiarch support
+
+ -- Luca Bruno <lucab@debian.org>  Tue, 08 Oct 2013 16:15:50 +0200
+
+libuv (0.10.17-0~exp2) experimental; urgency=low
+
+  * Mark tty test as skipped
+  * Relax timing assumptions of timer_again test
+
+ -- Luca Bruno <lucab@debian.org>  Sat, 28 Sep 2013 15:47:41 +0200
+
+libuv (0.10.17-0~exp1) experimental; urgency=low
+
+  * New upstream release
+  * Update watch file to only track stable tags
+  * Relax timing assumptions of loop_stop test
+
+ -- Luca Bruno <lucab@debian.org>  Sat, 28 Sep 2013 09:00:29 +0200
+
+libuv (0.10.16-0~exp1) experimental; urgency=low
+
+  * New upstream version 0.10.16
+    + Refreshed all local patches
+
+ -- Luca Bruno <lucab@debian.org>  Fri, 27 Sep 2013 16:18:12 +0200
+
+libuv (0.10.8-0~exp4) experimental; urgency=low
+
+  * Add pkg-config support file for libuv
+  * Initial port to kfreebsd-any
+    + Add libkvm-dev build-dep for kfreebsd
+    + A couple of tests are sometime failing
+
+ -- Luca Bruno <lucab@debian.org>  Wed, 18 Sep 2013 10:49:27 +0200
+
+libuv (0.10.8-0~exp3) experimental; urgency=low
+
+  * Fix test suite errors (Closes: #722283)
+    + Adjust test runner invocation for missing TTY on buildd
+    + Backport patch: fix setsockopt(SO_REUSEPORT) error handling
+
+ -- Luca Bruno <lucab@debian.org>  Tue, 10 Sep 2013 19:26:24 +0200
+
+libuv (0.10.8-0~exp2) unstable; urgency=low
+
+  * Use canonical URL in Vcs-Git tag
+  * Enable built-time tests
+
+ -- Luca Bruno <lucab@debian.org>  Fri, 06 Sep 2013 23:17:04 +0200
+
+libuv (0.10.8-0~exp1) experimental; urgency=low
+
+  * Initial upload (Closes: #709480)
+
+ -- Luca Bruno <lucab@debian.org>  Sat, 25 May 2013 21:11:26 +0200

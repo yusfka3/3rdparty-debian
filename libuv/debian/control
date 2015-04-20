@@ -1,0 +1,78 @@
+Source: libuv
+Priority: optional
+Maintainer: Debian Javascript Maintainers <pkg-javascript-devel@lists.alioth.debian.org>
+Uploaders: Luca Bruno <lucab@debian.org>
+Build-Depends: debhelper (>= 9),
+               dh-exec (>=0.3),
+               libkvm-dev [kfreebsd-any]
+Standards-Version: 3.9.5
+Section: libs
+Homepage: https://github.com/joyent/libuv
+Vcs-Browser: http://anonscm.debian.org/gitweb/?p=collab-maint/libuv.git
+Vcs-Git: git://anonscm.debian.org/collab-maint/libuv.git
+
+Package: libuv-dev
+Section: libdevel
+Architecture: any
+Depends: libuv (= ${binary:Version}), ${misc:Depends}
+Provides: libuv-dev
+Replaces: libuv-dev
+Conflicts: libuv-dev
+Multi-Arch: same
+Description: asynchronous event notification library - development files
+ Libuv is the asynchronous library behind Node.js. Very similar to libevent or
+ libev, it provides the main elements for event driven systems: watching and
+ waiting for availability in a set of sockets, and some other events like timers
+ or asynchronous messages. However, libuv also comes with some other extras
+ like:
+  * files watchers and asynchronous operations
+  * a portable TCP and UDP API, as well as asynchronous DNS resolution
+  * processes and threads management, and a portable inter-process
+    communications mechanism, with pipes and work queues
+  * a plugins mechanism for loading libraries dynamically
+  * interface with external libraries that also need to access the I/O.
+ .
+ Install this package if you wish to develop your own programs using the
+ libuv engine.
+
+Package: libuv
+Architecture: any
+Pre-Depends: ${misc:Pre-Depends}
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Multi-Arch: same
+Description: asynchronous event notification library - runtime library
+ Libuv is the asynchronous library behind Node.js. Very similar to libevent or
+ libev, it provides the main elements for event driven systems: watching and
+ waiting for availability in a set of sockets, and some other events like timers
+ or asynchronous messages. However, libuv also comes with some other extras
+ like:
+  * files watchers and asynchronous operations
+  * a portable TCP and UDP API, as well as asynchronous DNS resolution
+  * processes and threads management, and a portable inter-process
+    communications mechanism, with pipes and work queues
+  * a plugins mechanism for loading libraries dynamically
+  * interface with external libraries that also need to access the I/O.
+ .
+ This package includes the dynamic library against which you can link
+ your program.
+
+Package: libuv-dbg
+Priority: extra
+Section: debug
+Architecture: any
+Depends: libuv (= ${binary:Version}), ${misc:Depends}
+Multi-Arch: same
+Description: asynchronous event notification library - debugging symbols
+ Libuv is the asynchronous library behind Node.js. Very similar to libevent or
+ libev, it provides the main elements for event driven systems: watching and
+ waiting for availability in a set of sockets, and some other events like timers
+ or asynchronous messages. However, libuv also comes with some other extras
+ like:
+  * files watchers and asynchronous operations
+  * a portable TCP and UDP API, as well as asynchronous DNS resolution
+  * processes and threads management, and a portable inter-process
+    communications mechanism, with pipes and work queues
+  * a plugins mechanism for loading libraries dynamically
+  * interface with external libraries that also need to access the I/O.
+ .
+ This package provides the debugging symbols for the library.

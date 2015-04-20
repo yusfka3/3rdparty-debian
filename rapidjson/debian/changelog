@@ -1,0 +1,27 @@
+rapidjson (1.0~beta-1) unstable; urgency=low
+
+  * Locally built package from git repository at tag v1.0-beta 
+
+ -- Amit Bose <bose@noironetworks.com>  Wed, 16 Apr 2015 10:06:27 -0700
+
+rapidjson (0.12~git20141031-1) unstable; urgency=low
+
+  * new upstream snapshot
+
+  [Philipp A. Hartmann]
+  * install only doc/html
+  * remove obsolete/unintended include-binaries
+  * update debian/copyight and debian/control
+  * remove unndeeded libjson and libyajl from Build-Depends
+  * add libgtest-dev as build dependency and add `use-system-gtest.diff' patch
+    to point to system-wide Google test sources 
+  * drop SSE4.2 hack
+  * run tests on all platforms
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 02 Nov 2014 12:47:05 +0100
+
+rapidjson (0.12~git20140926-1) unstable; urgency=low
+
+  * Initial release (Closes: #763453)
+
+ -- Rene Engelhard <rene@debian.org>  Sun, 26 Oct 2014 18:49:47 +0100
