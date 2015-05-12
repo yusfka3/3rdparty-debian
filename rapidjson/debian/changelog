@@ -1,3 +1,9 @@
+rapidjson (1.0.1-1) unstable; urgency=low
+
+  * Update to 1.0.1
+
+ -- Rob Adams <readams@readams.net>  Tue, 12 May 2015 10:48:27 -0700
+
 rapidjson (1.0~beta-1) unstable; urgency=low
 
   * Locally built package from git repository at tag v1.0-beta 

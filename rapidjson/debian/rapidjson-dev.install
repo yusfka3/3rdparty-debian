@@ -1,1 +1,2 @@
-include/rapidjson usr/include
+/usr/include/rapidjson
+/usr/lib/pkgconfig
