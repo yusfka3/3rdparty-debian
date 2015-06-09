@@ -1,3 +1,9 @@
+rapidjson (1.0.2-1) unstable; urgency=medium
+
+  * Update to 1.0.2
+
+ -- Amit Bose <bose@noironetworks.com>  Mon, 08 Jun 2015 17:22:12 -0700
+
 rapidjson (1.0.1-1) unstable; urgency=low
 
   * Update to 1.0.1
