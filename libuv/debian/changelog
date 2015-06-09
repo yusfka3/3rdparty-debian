@@ -1,3 +1,9 @@
+libuv (1.5.0-1) unstable; urgency=medium
+
+  * Update to 1.5.0
+
+ -- Amit Bose <bose@noironetworks.com>  Mon, 08 Jun 2015 17:26:39 -0700
+
 libuv (1.4.2-1) unstable; urgency=low
 
   * Locally built package from git repository at tag v1.4.2 
