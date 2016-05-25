@@ -1,0 +1,36 @@
+Source: ciscoconfparse
+Maintainer: David Michael Pennington <mike /|at|\ pennington.net>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 7)
+Standards-Version: 3.9.1
+
+
+
+Package: python-ciscoconfparse
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Parse, Audit, Query, Build, and Modify Cisco IOS-style confi
+ ==============
+ ciscoconfparse
+ ==============
+ .
+ .. image:: https://travis-ci.org/mpenning/ciscoconfparse.png?branch=master
+    :target: https://travis-ci.org/mpenning/ciscoconfparse
+    :alt: Travis CI Status
+ .
+ .. image:: https://img.shields.io/pypi/v/ciscoconfparse.svg
+    :target: https://pypi.python.org/pypi/ciscoconfparse/
+    :alt: Version
+ .
+ .. image:: http://img.shields.io/badge/license-GPLv3-blue.svg
+    :target: https://www.gnu.org/copyleft/gpl.html
+    :alt: License
+ .
+ .. image:: https://img.shields.io/pypi/dm/ciscoconfparse.svg
+    :target: https://pypi.python.org/pypi/ciscoconfparse
+    :alt: Downloads
+ .
+
+
+

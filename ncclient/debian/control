@@ -1,0 +1,36 @@
+Source: ncclient
+Maintainer: Shikhar Bhushan, Leonidas Poulopoulos, Ebben Aries <shikhar@schmizz.net, lpoulopoulos@verisign.com, earies@juniper.net>
+Section: python
+Priority: optional
+Build-Depends: python-setuptools (>= 0.6b3), python-all (>= 2.6.6-3), debhelper (>= 7)
+Standards-Version: 3.9.1
+
+
+
+Package: python-ncclient
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Python library for NETCONF clients
+ ncclient: Python library for NETCONF clients
+ --------------------------------------------
+ .
+ ncclient is a Python library that facilitates client-side scripting and
+ application development around the NETCONF protocol. ``ncclient`` was
+ developed by `Shikar Bhushan <http://schmizz.net>`_. It is now
+ maintained by `Leonidas Poulopoulos (@leopoul) <http://ncclient.org/ncclient>`_
+ .
+ Docs:
+ `http://ncclient.readthedocs.org <http://ncclient.readthedocs.org>`_
+ .
+ Requirements:
+ ^^^^^^^^^^^^^
+ .
+ -  Python 2.6 <= version < 3.0
+ -  setuptools 0.6+
+ -  Paramiko 1.7+
+ -  lxml 3.3.0+
+ -  libxml2
+ -  libxslt
+
+
+
