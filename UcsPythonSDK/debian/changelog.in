@@ -1,0 +1,5 @@
+ucssdk (@VERSION@-@REVISION@) trusty; urgency=low
+
+  * source package automatically created by stdeb 0.8.5
+
+ -- Thomas Bachman <bachman@noironetworks.com>  Mon, 22 Aug 2016 12:36:45 -0400
