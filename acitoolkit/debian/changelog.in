@@ -1,0 +1,5 @@
+acitoolkit (@VERSION@-@REVISION@) trusty; urgency=low
+
+  * Initial package
+
+ -- Amit Bose <bose@noironetworks.com>  Thu, 28 Jul 2016 17:24:31 +0000
