@@ -1,0 +1,15 @@
+Source: vmware-dvs
+Section: python
+Priority: optional
+Maintainer: Cisco Systems, Inc. <openstack-networking@cisco.com>
+Build-Depends: debhelper (>= 9), python-setuptools (>= 3.3), python-all (>= 2.7)
+Standards-Version: 3.9.5
+Homepage: https://github.com/noironetworks/vmware-dvs
+Vcs-Browser: https://github.com/noironetworks/vmware-dvs
+
+Package: vmware-dvs
+Architecture: all
+Depends: ${misc:Depends}, python-novaclient, python-suds
+Description: Neutron agent for VMware DVS
+ Neutron agent that provides VMware DVS support
+
