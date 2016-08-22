@@ -1,0 +1,17 @@
+Source: ucssdk
+Maintainer: Thomas Bachman <bachman@noironetworks.com>
+Section: python
+Priority: optional
+Build-Depends: python-all (>= 2.6.6-3), debhelper (>= 7)
+Standards-Version: 3.9.1
+
+
+
+Package: python-ucssdk
+Architecture: all
+Depends: ${misc:Depends}, ${python:Depends}
+Description: Python SDK for Cisco UCS Manager
+ Install Instructions: sudo python setup.py install
+
+
+
