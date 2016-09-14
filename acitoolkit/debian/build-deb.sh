@@ -13,9 +13,9 @@ fi
 BUILD_DIR=${BUILD_DIR:-`pwd`/debbuild}
 mkdir -p $BUILD_DIR
 rm -rf $BUILD_DIR/*
-NAME=`python setup.py --name`
-VERSION_PY=`python setup.py --version`
-VERSION=${VERSION_PY/.dev/~dev}
+NAME=`python setup.py --name 2> /dev/null`
+VERSION_PY=`python setup.py --version 2> /dev/null`
+VERSION=`git describe --tags | tr -d v | cut -d'-' -f1`
 REVISION=${REVISION:-1}
 python setup.py sdist --dist-dir $BUILD_DIR
 SOURCE_FILE=${NAME}-${VERSION_PY}.tar.gz
