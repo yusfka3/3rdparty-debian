@@ -1,3 +1,9 @@
+vmware-dvs (2:@VERSION@-@REVISION@) trusty; urgency=low
+
+  * Update to Mitaka
+
+ -- Thomas Bachman <bachman@noironetworks.com>  Thu, 13 Oct 2016 19:07:00 +0000
+
 vmware-dvs (@VERSION@-@REVISION@) trusty; urgency=low
 
   * [Placeholder]
