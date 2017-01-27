@@ -20,9 +20,8 @@ set -e
 
 case "$1" in
     configure)
-        networking-cisco-db-manage --config-file /etc/neutron/neutron.conf upgrade head
+        neutron-db-manage --config-file /etc/neutron/neutron.conf upgrade head
     ;;
-
     abort-upgrade|abort-remove|abort-deconfigure)
     ;;
 
