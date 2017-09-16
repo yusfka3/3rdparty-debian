@@ -1,4 +1,4 @@
-Source: vmware-dvs
+Source: networking-vsphere
 Section: python
 Priority: optional
 Maintainer: Cisco Systems, Inc. <openstack-networking@cisco.com>
@@ -7,7 +7,7 @@ Standards-Version: 3.9.5
 Homepage: https://github.com/noironetworks/vmware-dvs
 Vcs-Browser: https://github.com/noironetworks/vmware-dvs
 
-Package: vmware-dvs
+Package: networking-vsphere
 Architecture: all
 Depends: ${misc:Depends}, python-novaclient, python-suds
 Description: Neutron agent for VMware DVS

@@ -1,10 +1,16 @@
-vmware-dvs (2:@VERSION@-@REVISION@) trusty; urgency=low
+networking-vsphere (3:@VERSION@-@REVISION@) trusty; urgency=low
+
+  * Update to Newton
+
+ -- Thomas Bachman <bachman@noironetworks.com>  Tue, 12 Sep 2017 19:07:00 +0000
+
+networking-vsphere (1.0.1-1) trusty; urgency=low
 
   * Update to Mitaka
 
  -- Thomas Bachman <bachman@noironetworks.com>  Thu, 13 Oct 2016 19:07:00 +0000
 
-vmware-dvs (@VERSION@-@REVISION@) trusty; urgency=low
+networking-vsphere (2015.3.0-1) trusty; urgency=low
 
   * [Placeholder]
 
