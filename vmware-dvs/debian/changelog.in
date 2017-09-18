@@ -1,5 +1,11 @@
 networking-vsphere (3:@VERSION@-@REVISION@) trusty; urgency=low
 
+  * Update to Ocata
+
+ -- Thomas Bachman <bachman@noironetworks.com>  Fri, 15 Sep 2017 19:07:00 +0000
+
+networking-vsphere (2.0.1-1) trusty; urgency=low
+
   * Update to Newton
 
  -- Thomas Bachman <bachman@noironetworks.com>  Tue, 12 Sep 2017 19:07:00 +0000
