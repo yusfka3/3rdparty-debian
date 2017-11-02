@@ -1,3 +1,9 @@
+rapidjson (1.1.0-1) unstable; urgency=low
+
+  * Update to 1.1.0
+
+ -- Rob Adams <readams@readams.net>  Thu, 02 Nov 2017 10:38:00 -0700
+
 rapidjson (1.0.2-1) unstable; urgency=medium
 
   * Update to 1.0.2
