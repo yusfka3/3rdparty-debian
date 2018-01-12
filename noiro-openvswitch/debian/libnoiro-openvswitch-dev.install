@@ -1,4 +1,6 @@
-usr/lib/*
+usr/lib/*/*.a
+usr/lib/*/*.la
+usr/lib/*/pkgconfig/*.pc
 include/*.h usr/include/openvswitch
 include/openflow/*.h usr/include/openvswitch/openflow
 include/openvswitch/*.h usr/include/openvswitch/openvswitch

@@ -20,7 +20,7 @@ Build-Depends: graphviz,
 Standards-Version: 3.9.3
 Homepage: http://openvswitch.org/
 
-Package: noiro-openvswitch-dev
+Package: libnoiro-openvswitch-dev
 Architecture: linux-any
 Depends:
  ${misc:Depends}
@@ -35,11 +35,17 @@ Description: Open vSwitch development package
  .
  This package provides openvswitch headers and libopenvswitch for developers.
 
+Package: libnoiro-openvswitch
+Architecture: linux-any
+Depends:
+ ${misc:Depends}
+Description: Noiro Open vSwitch OpenFlow library
+ This provides dynamic libraries for using OpenFlow with OVS
+
 Package: noiro-openvswitch-dbg
 Section: debug
 Architecture: linux-any
-Depends: noiro-openvswitch-dev (= ${binary:Version})
-         ${misc:Depends},
+Depends: ${misc:Depends},
          ${shlibs:Depends}
 Description: Debug symbols for Open vSwitch packages
  Open vSwitch is a production quality, multilayer, software-based,
