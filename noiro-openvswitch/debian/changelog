@@ -1,3 +1,7 @@
+openvswitch (2.6.7-1) bionic; urgency=low
+
+  * Updating noiro package to use ovs 2.6.7
+
 openvswitch (2.6.0-2) unstable; urgency=low
 
   * Noiro openvswitch packages
