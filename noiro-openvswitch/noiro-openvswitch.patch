@@ -1,17 +1,17 @@
 diff --git a/Makefile.am b/Makefile.am
-index 49010b3..2c254f8 100644
+index ff1f94b..3ecefb3 100644
 --- a/Makefile.am
 +++ b/Makefile.am
-@@ -134,6 +134,7 @@ MAN_ROOTS =
- noinst_DATA =
+@@ -113,6 +113,7 @@ noinst_DATA =
  noinst_HEADERS =
  lib_LTLIBRARIES =
+ noinst_LTLIBRARIES =
 +noinst_LTLIBRARIES =
  noinst_man_MANS =
  noinst_PROGRAMS =
  noinst_SCRIPTS =
 diff --git a/lib/automake.mk b/lib/automake.mk
-index e4cfc97..b466196 100644
+index 17b36b4..3152060 100644
 --- a/lib/automake.mk
 +++ b/lib/automake.mk
 @@ -5,7 +5,10 @@
@@ -26,16 +26,16 @@ index e4cfc97..b466196 100644
  
  lib_libopenvswitch_la_LIBADD = $(SSL_LIBS)
  lib_libopenvswitch_la_LIBADD += $(CAPNG_LDADD)
-@@ -14,7 +17,7 @@ if WIN32
+@@ -15,7 +18,7 @@ if WIN32
  lib_libopenvswitch_la_LIBADD += ${PTHREAD_LIBS}
  endif
  
 -lib_libopenvswitch_la_LDFLAGS = \
 +lib_libnoiro_openvswitch_la_LDFLAGS = \
-         -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
+         $(OVS_LTINFO) \
          -Wl,--version-script=$(top_builddir)/lib/libopenvswitch.sym \
          $(AM_LDFLAGS)
-@@ -326,8 +329,11 @@ nodist_lib_libopenvswitch_la_SOURCES = \
+@@ -366,8 +369,11 @@ nodist_lib_libopenvswitch_la_SOURCES = \
  	lib/vswitch-idl.h
  CLEANFILES += $(nodist_lib_libopenvswitch_la_SOURCES)
  
@@ -46,7 +46,7 @@ index e4cfc97..b466196 100644
 +lib_libnoiro_sflow_la_SOURCES =
 +lib_libnoiro_sflow_la_LIBADD = lib/libsflow.la
 +lib_libnoiro_sflow_la_LDFLAGS = \
-         -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
+         $(OVS_LTINFO) \
          -Wl,--version-script=$(top_builddir)/lib/libsflow.sym \
          $(AM_LDFLAGS)
 diff --git a/lib/libopenvswitch.pc.in b/lib/libopenvswitch.pc.in
@@ -78,7 +78,7 @@ index e70a2b7..6f73164 100644
  Libs.private: @LIBS@
  Cflags: -I${includedir}/openvswitch
 diff --git a/ofproto/automake.mk b/ofproto/automake.mk
-index 7486f2b..1ced5d3 100644
+index 7c08b56..5ae1730 100644
 --- a/ofproto/automake.mk
 +++ b/ofproto/automake.mk
 @@ -5,8 +5,12 @@
@@ -93,9 +93,11 @@ index 7486f2b..1ced5d3 100644
 +ofproto_libnoiro_ofproto_la_LIBADD = ofproto/libofproto.la
 +
 +ofproto_libnoiro_ofproto_la_LDFLAGS = \
-         -version-info $(LT_CURRENT):$(LT_REVISION):$(LT_AGE) \
+         $(OVS_LTINFO) \
          -Wl,--version-script=$(top_builddir)/ofproto/libofproto.sym \
          $(AM_LDFLAGS)
+
+
 diff --git a/ofproto/libofproto.pc.in b/ofproto/libofproto.pc.in
 index 2740712..7a80266 100644
 --- a/ofproto/libofproto.pc.in
@@ -109,15 +111,15 @@ index 2740712..7a80266 100644
  Libs.private: @LIBS@
  Cflags: -I${includedir}/openvswitch
 diff --git a/tests/automake.mk b/tests/automake.mk
-index d42b576..e1782a6 100644
+index d6ab517..4f57201 100644
 --- a/tests/automake.mk
 +++ b/tests/automake.mk
-@@ -370,7 +370,7 @@ tests_ovstest_SOURCES += \
+@@ -474,7 +474,7 @@ tests_ovstest_SOURCES += \
  	tests/test-netlink-conntrack.c
  endif
  
 -tests_ovstest_LDADD = lib/libopenvswitch.la ovn/lib/libovn.la
 +tests_ovstest_LDADD = lib/libnoiro_openvswitch.la ovn/lib/libovn.la
- dist_check_SCRIPTS = tests/flowgen.pl
  
- noinst_PROGRAMS += tests/test-strtok_r
+ noinst_PROGRAMS += tests/test-stream
+ tests_test_stream_SOURCES = tests/test-stream.c
