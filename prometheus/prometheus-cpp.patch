@@ -1,10 +1,10 @@
 diff --git a/CMakeLists.txt b/CMakeLists.txt
-index 28e193f..e158c11 100644
+index 73f942c..eacb7ea 100644
 --- a/CMakeLists.txt
 +++ b/CMakeLists.txt
-@@ -97,6 +97,63 @@ install(
-   DESTINATION "${CMAKE_INSTALL_LIBDIR}/cmake/${PROJECT_NAME}"
- )
+@@ -121,6 +121,63 @@ if(CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_SOURCE_DIR)
+   include(CPack)
+ endif()
 
 +# Function to generate pkg-config files.
 +function(generate_pkgconfig name description version libname requires
