@@ -11,6 +11,12 @@ if [ ! -f debian/changelog.in ]; then
    exit 1
 fi
 
+# Remove the websocket-client dependency in setup.py, since
+# we are already specifying it in the debian/control file,
+# and for some reason this name is wrong when JuJu tries
+# to resolve the dependencies (works fine with RPMs)
+cp setup.py setup.py.orig
+sed -i '/websocket-client/d' ./setup.py
 # Build python2 package
 BUILD_DIR=${BUILD_DIR:-`pwd`/debbuild}
 mkdir -p $BUILD_DIR
@@ -36,6 +42,7 @@ cp debbuild/*.deb .
 rm -rf debbuild
 
 # Prepare build scripts for python3
+mv setup.py.orig setup.py
 cp debian/control .
 cp debian/rules .
 sed -i "s/python/python3/g" debian/control
